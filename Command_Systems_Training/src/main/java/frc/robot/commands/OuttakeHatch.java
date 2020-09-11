@@ -16,10 +16,10 @@ public class OuttakeHatch extends SequentialCommandGroup {
   /**
    * Creates a new OuttakeHatch.
    */
-  public OuttakeHatch(Hatch_Intake_Subsystem, HatchIntakeRollersubsystem(), Hatch_Intake_Subsystem ) {
+  public OuttakeHatch(Hatch_Intake_Subsystem, HatchIntakeRollersubsystem(), Hatch_Intake_Subsystem ) { //these need to have names (like any constructor)
     // Add your commands in the super() call, e.g.
     // super(new FooCommand(), new BarCommand());
-    super(new Prepare_To_Intake(), new Set_Hatch_Rollers(DoubleSupplier -1), new Stow());
+    super(new Prepare_To_Intake(), new Set_Hatch_Rollers(DoubleSupplier -1), new Stow()); //should be ()->{-1} rather than DoubleSupplier, Stow needs to take subsystem as arg
 
 
 

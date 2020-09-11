@@ -10,10 +10,10 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 
 
-
-public class Prepare_To_Intake extends Command {
+ 
+public class Prepare_To_Intake extends Command { //this seems unfinished
   
-  public Prepare_To_Intake() {
+  public Prepare_To_Intake() { 
     private subsystem HatchIntakeRollersSubsystem()
   }
 

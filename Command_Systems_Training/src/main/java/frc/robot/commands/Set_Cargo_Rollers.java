@@ -9,7 +9,7 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-public class Set_Cargo_Rollers extends Command {
+public class Set_Cargo_Rollers extends Command { //same as SetHatch with the subsystem as field and pwm as field
   public Set_Cargo_Rollers(DoubleSupplier pwm) {
     
     private subsystem CargoRollerSubsystem();
@@ -24,7 +24,7 @@ public class Set_Cargo_Rollers extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    CargoRollerSubsystem.set(pwm)
+    CargoRollerSubsystem.set(pwm) //semicolon
   }
 
   // Make this return true when this Command no longer needs to run execute()

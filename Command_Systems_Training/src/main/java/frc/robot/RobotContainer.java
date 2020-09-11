@@ -12,7 +12,7 @@ import edu.wpi.first.wpilibj.XboxController;
 import frc.robot.commands.ExampleCommand;
 import frc.robot.subsystems.ExampleSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
-private XboxController operator;
+private XboxController operator;//put this inside the class
 
 /**
  * This class is where the bulk of the robot should be declared.  Since Command-based is a
@@ -24,13 +24,16 @@ public class RobotContainer {
 
   
  
-  operator = New XboxController();
-  private DoubleSolenoid HatcheSolenoid;
+  operator = New XboxController(); //lowercase new and put inside constructor
+
+  private DoubleSolenoid HatcheSolenoid; //lowercase (hatchSolenoid)
   // The robot's subsystems and commands are defined here...
-  private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
+  private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem(); // can delete these
 
   private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
 
+
+  //need to declare subsystems here  (also use CamelCasing for subsystems not underscores)
 
 
   /**
@@ -52,8 +55,9 @@ public class RobotContainer {
    * {@link edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
-    CargoRoller.setDefualtCommand(new Set_Cargo_Rollers(CargoRoller, ()-> operator.getX(GenericHID.kRight)));
+    CargoRoller.setDefualtCommand(new Set_Cargo_Rollers(CargoRoller, ()-> operator.getX(GenericHID.kRight))); //make cargoRoller lowercase, but otherwise good.
     HatchRoller.setDefualtCommand(new Set_Hatch_Rollers(HatchRoller, ()-> operator.getX(GenericHID.kLeft)));
+    //these are fine, but write ways for driver and operator to interact w/ all subsystems and commands
   }
 
 

@@ -10,7 +10,8 @@ package frc.robot.subsystems;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class CargoRollerSubsystem extends SubsystemBase {
-  private WPI_TalonSRX CargoRoller = new WPI_TalonSRX(8);
+  private WPI_TalonSRX CargoRoller = new WPI_TalonSRX(8); //make lowercase, initialize in constructor
+  //both of these should be in constructor
   Cargo_Roller_Subsystem.setDefualtCommand(Set_Cargo_Rollers);
   configureButtonBindings();
   /**

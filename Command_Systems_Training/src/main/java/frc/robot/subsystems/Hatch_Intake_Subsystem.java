@@ -10,8 +10,8 @@ package frc.robot.subsystems;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Hatch_Intake_Subsystem extends SubsystemBase {
-  private DoubleSolenoid LiftSolenoid = new DoubleSolenoid(0,4);
-  private DoubleSolenoid HatcheSolenoid = new DoubleSolenoid(1,5);
+  private DoubleSolenoid LiftSolenoid = new DoubleSolenoid(0,4); // make fields lowercase and intiialize in constructor
+  private DoubleSolenoid HatcheSolenoid = new DoubleSolenoid(1,5); //this is the "slide solenoid"
   /**
    * Creates a new Hatch_Intake_Subsystem.
    */
@@ -23,7 +23,7 @@ public class Hatch_Intake_Subsystem extends SubsystemBase {
   public void periodic() {
     // This method will be called once per scheduler run
   }
-  public void HatchStowed(){
+  public void HatchStowed(){ //make methods lowercase, but otherwise good
     liftSolenoid.set(value.kReverse);
     hatchSolenoid.set(value.kReverse);
   }

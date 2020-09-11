@@ -9,15 +9,17 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-public class Stow extends Command {
-  public Stow() {
-    private subsystem Hatch_Intake_Subsystem();
+public class Stow extends Command { //this is my bad but make this an InstantCommand (only initialzie method)
+
+  //include subsystem as field
+  public Stow() { // include subsystem in argument of constructor
+    private subsystem Hatch_Intake_Subsystem(); //set field to constructor argument here
   }
 
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    HatchIntakeRollersSubsystem.set(-1);
+    HatchIntakeRollersSubsystem.set(-1); // this shoudl call the stow method of HatchIntakeSubystem
   }
 
   // Called repeatedly when this Command is scheduled to run

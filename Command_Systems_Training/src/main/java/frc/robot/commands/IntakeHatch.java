@@ -12,13 +12,13 @@ import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
 // NOTE:  Consider using this command inline, rather than writing a subclass.  For more
 // information, see:
 // https://docs.wpilib.org/en/latest/docs/software/commandbased/convenience-features.html
-public class IntakeHatch extends SequentialCommandGroup {
+public class IntakeHatch extends SequentialCommandGroup { //same feedback as outtake
   /**
    * Creates a new IntakeHatch.
    */
   public IntakeHatch(Hatch_Intake_Subsystem, HatchIntakeRollersubsystem, Hatch_Intake_Subsystem) {
     // Add your commands in the super() call, e.g.
     // super(new FooCommand(), new BarCommand());
-    super(new Prepare_To_Intake(), new Set_Hatch_Rollers(DoubleSupplier 1), new Stow());
+    super(new Prepare_To_Intake(), new Set_Hatch_Rollers(DoubleSupplier 1), new Stow()); 
   }
 }
